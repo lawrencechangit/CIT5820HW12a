@@ -46,6 +46,8 @@ def get_ape_info(apeID):
     data['owner']=owner
     data['eyes'] = eyes
     data['image'] = image_url
+    print(data)
+    print(apeID)
 
     assert isinstance(data, dict), f'get_ape_info{apeID} should return a dict'
     assert all([a in data.keys() for a in
