@@ -29,8 +29,8 @@ def get_ape_info(apeID):
     data = {'owner': "", 'image': "", 'eyes': ""}
 
     # YOUR CODE HERE
-    contract=web3.eth.contract(address=contract_address,abi=abi)
-    owner=contract.functions.owner().call
+    #contract=web3.eth.contract(address=contract_address,abi=abi)
+    #owner=contract.functions.owner().call
 
     # Get metadata from ifps.io
     ipfs_url = 'https://ipfs.io/ipfs/QmeSjSinHpPnmXmspMjwiXyN6zS4E9zccariGR3jxcaWtq/'
