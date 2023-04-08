@@ -40,7 +40,12 @@ def get_ape_info(apeID):
     content = response.content
     dictionary = json.loads(content.decode('utf-8'))
     image_url = dictionary['image']
-    eyes = dictionary['attributes'][3]['value']
+    eye_index = 0
+    for x in range(6):
+        if dictionary['attributes'][x]['trait_type'] == 'Eyes':
+            eye_index = x
+            break
+    eyes = dictionary['attributes'][eye_index]['value']
     response.close()
 
     data['owner']=owner
