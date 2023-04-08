@@ -41,7 +41,7 @@ def get_ape_info(apeID):
     dictionary = json.loads(content.decode('utf-8'))
     image_url = dictionary['image']
     eye_index = 0
-    for x in range(6):
+    for x in range(20):
         if dictionary['attributes'][x]['trait_type'] == 'Eyes':
             eye_index = x
             break
